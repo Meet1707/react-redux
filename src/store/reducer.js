@@ -5,14 +5,16 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  if (action.type === actionType.INC_COUNTER)
-    return {
-      counter: state.counter + 1
-    };
-  else if (action.type === actionType.INC_COUNTER_10)
-    return {
-      counter: state.counter + 10
-    };
+  switch (action.type) {
+    case actionType.INC_COUNTER:
+      return {
+        counter: state.counter + 1
+      };
+    case actionType.INC_COUNTER_10:
+      return {
+        counter: state.counter + 10
+      };
+  }
   return state;
 };
 
