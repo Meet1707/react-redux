@@ -18,7 +18,7 @@ const App = props => {
 const mapDispatchToProps = dispatch => {
   return {
     onIncCounter: () => dispatch({ type: actionType.INC_COUNTER }),
-    onIncCounterBy10: () => dispatch({ type: actionType.INC_COUNTER_10 })
+    onIncCounterBy10: () => dispatch(actionType.incBy10())
   };
 };
 
