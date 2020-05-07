@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import "./App.css";
 import * as actionType from "./store/actions";
 import Counter from "./Counter";
-
+import { inc } from './store/actions';
 const App = props => {
   return (
     <div>
@@ -11,6 +11,8 @@ const App = props => {
       <button onClick={props.onIncCounter}>Increment</button>
       <br />
       <button onClick={props.onIncCounterBy10}>Increment by 10</button>
+      <br />
+      <button onClick={() => inc()}>Increment by 10 using thunk</button>
     </div>
   );
 };

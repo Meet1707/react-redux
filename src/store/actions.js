@@ -8,3 +8,8 @@ export const incBy10 = () => {
     }, 1000);
   };
 };
+const abc = () => ({ type: INC_COUNTER_10 })
+export const inc = () => dispatch => {
+  console.log("HEllo");
+  dispatch(abc())
+}
